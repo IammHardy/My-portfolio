@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Yusuf Abdulhadi Adavize</title>
+    <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo displaced-container">
+            <span class="name">Yusuf</span>
+            <span class="name">Abdulhadi</span>
+            <span class="name">Adavize</span>
+        </h1>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-left">
+            <div class="hero-content">
+                <h1 class="hero-title">I'm <span class="displaced">Yusuf Abdulhadi Adavize</span></h1>
+                <p class="hero-subtitle">A <span class="displaced">Developer</span> & <span class="displaced">Designer</span> passionate about crafting beautiful, functional experiences.</p>
+                <button class="glass-cta">Let's Work Together</button>
+            </div>
+        </div>
+        <div class="hero-right">
+            <img src="../public/sample1-removebg-preview.png" alt="Profile Image" class="profile-image">
+        </div>
+    </section>
+    
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a web developer passionate about building modern, user-friendly, and visually appealing websites. I specialize in frontend and backend development.</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <a href="https://stichtingsolaris.nl/" target="_blank">
+                    <img src="../public/Stichingsolaris.png" alt="Project 1">
+                    <div class="project-info">
+                        
+                        <h4>Stitchting Solaris</h4>
+                        <p>A nonprofit platform designed to support grant applications and funding opportunities, providing structured documentation, project details, and policy plans for transparency and compliance.
+
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="https://ontologyofvalue.com" target="_blank">
+                    <img src="../public/ontology.png" alt="Project 2">
+                    <div class="project-info">
+                        
+                        <h4>Ontology of Value</h4>
+                        <p>A platform that assists professionals and teams in reaching their full potential by offering courses, consultancy, career transition programs, and more. 
+
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="https://ontologyofvaluetest.com/" target="_blank">
+                    <img src="../public/test.png" alt="Project 3">
+                    <div class="project-info">
+                        <h4>Ontology of Value Test</h4>
+                        <p>An assessment tool designed to help individuals understand their natural value-building profile and identify compatible working environments.
+
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form onsubmit="sendEmail(event)">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Yusuf Abdulhadi Adavize. All Rights Reserved.</p>
+    </footer>
+    <script src="../src/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    emailjs.init("uJKxGFXAiImcQlNEB"); // Replace with your User ID
+
+    function sendEmail(event) {
+        event.preventDefault();
+
+        emailjs.sendForm("service_7vbohtl", "template_dnx4gvp", event.target)
+            .then(response => alert("Message sent successfully!"))
+            .catch(error => alert("Failed to send message"));
+    }
+</script>
+
+
+</body>
+</html>
