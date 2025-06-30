@@ -528,11 +528,50 @@ footer {
         margin: 20px auto;
     }
     #projects{
-        height: 1100px;
+        height: 1400px;
         margin-bottom: 20px;
         padding: 20px;
 
     }
 }
 
+#skills {
+    padding: 80px 10%;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #00adb5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.skill {
+    background-color: #252525;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+    border: 1px solid #00adb5;
+    width: 100%;
+    max-width: 200px;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+    background: #00adb5;
+    color: #121212;
+}
 
